@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada</title>
+    <style>
+    body{
+        background: darkgrey;
+    }    
+    h1{
+        background-color: white;
+        border: solid 1px;
+    }
+    .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 50px;
+    margin: 60px auto;
+}
+.botoes{
+    display: flexbox;
+    margin-left: 630px;
+    margin-top: 10%;
+    height: 35px;
+    width: 90px;
+    
+}
+.buttons{
+    margin-left: 360px;
+    margin-top: 70px;
+}
+#verde{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(18, 201, 27);
+    color: rgb(2, 1, 1);
+    align-items: center;
+}
+#azul{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(51, 19, 233);
+    color: rgb(2, 1, 1);
+    align-items: center;
+}
+ #vermelho{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(233, 33, 19);
+    color: rgb(2, 1, 1);
+    align-items: center;
+ }
+ #amarelo{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(238, 241, 11);
+    color: rgb(2, 1, 1);
+    align-items: center;
+ }
+ #laranja{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(241, 103, 11);
+    color: rgb(2, 1, 1);
+    align-items: center;
+ }
+ #branco{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 1, 1);
+    align-items: center;
+ }
+ .lig{
+     width: 35px;
+ }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>LÂMPADA</h1>
+        <img  id="img" src="./img/black.png">
+    </div>
+    <div class="botoes">
+        <button id="ligar"><img class="lig" src="./img/onoff.png" alt="onoff"  onclick="mudarcor(1)">ON/OFF</button>
+    </div>
+    <div class="buttons">
+        <button id="verde" onclick="mudarcor(2)">VERDE</button>
+        <button id="azul" onclick="mudarcor(3)">AZUL</button>
+        <button id="vermelho" onclick="mudarcor(4)">VERMELHO</button>
+        <button id="amarelo" onclick="mudarcor(5)">AMARELO</button>
+        <button id="laranja" onclick="mudarcor(6)">LARANJA</button>
+        <button id="branco" onclick="mudarcor(7)">BRANCO</button>
+    </div>
+    <script>    
+        const i = document.getElementById("img")
+       
+
+
+        function mudarcor(valor){
+          
+            if (valor == 2){
+                i.src = "./img/green.png"
+            }
+            if (valor == 3){
+                i.src = "./img/blue.png"
+            }
+            if (valor == 4){
+                i.src = "./img/red.png"
+            }
+            if (valor == 5){
+                i.src = "./img/yellow.png"
+            }
+            if (valor == 6){
+                i.src = "./img/orange.png"
+            }
+            if (valor == 7){
+                i.src = "./img/white.png"
+            }
+            if (valor == 1){
+                i.src = "./img/black.png"
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>
